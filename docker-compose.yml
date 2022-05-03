@@ -2,12 +2,11 @@ version: '3'
 
 services:
   frontend:
-    build: .
+    build: ./frontend/.
     environment:
       - NODE_ENV=development
     volumes:
-      - ./:/Users/densetsu/free-apps/React/SamplePosts
-    command: sh -c 'cd frontend && yarn start'
+      - ./frontend/:/user/src/app/
     ports:
       - '3000:3000'
     tty: true
